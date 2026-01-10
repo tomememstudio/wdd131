@@ -1,0 +1,123 @@
+body {
+    font-family: 'Inter, sans-serif';
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #fd2dc9;
+    color: white
+}
+
+#course-title {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 1rem;
+}
+nav {
+    background-color: #91026d;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: -2.4%;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.4rem;
+    
+}
+
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 0.5rem;
+}
+
+main h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 0.4%;
+    margin-bottom: 1.7%;
+}
+.card {
+    border: 1px solid #ccc;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.card h2 {
+    background-color: #fd2dc9;
+    color: white;
+    text-align: center;
+    padding: 0.8rem;
+    margin: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.about-me {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: flex-start;
+}
+
+.about-me p {
+    margin: 0;
+}
+
+.about-me img {
+    width: 150px;
+    margin: 0;
+    /* clean */
+}
+
+/* Location Heading */
+.location {
+    font-weight: 600;
+    margin: 0.5rem 0 0.5rem 1rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid #ccc;
+    width: fit-content;
+    text-align: left;
+}
+
+/* Location Content */
+.location-box {
+    display: flex;
+    gap: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    align-items: flex-start;
+}
+
+.location-box img {
+    width: 120px;
+    border: 1px solid #ccc;
+}
+
+.location-box p {
+    margin: 0;
+}
+
+footer {
+    background-color: #fd2dc9;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+}
