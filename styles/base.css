@@ -1,5 +1,5 @@
 body {
-    font-family: 'Inter, sans-serif';
+    font-family: 'Inter', sans-serif;
     margin: 0;
     background-color: #f4f4f4;
 }
@@ -20,7 +20,7 @@ nav {
     background-color: #91026d;
     display: flex;
     justify-content: space-around;
-    margin-bottom: -2.4%;
+    margin-bottom: 0%;
 }
 
 nav a {
@@ -29,6 +29,11 @@ nav a {
     text-align: center;
     padding: 0.4rem;
     
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
 }
 
 main {
