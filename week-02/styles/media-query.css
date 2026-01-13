@@ -1,13 +1,14 @@
 body{
     font-family: "Roboto";
 }
-header{
+header, main, footer{
     max-width: 640px;
     margin: 1rem auto;
-    border: 1px #bbb;
+    border: 1px solid #bbb;
     padding: 1rem;
     background-color: rgb(30, 30, 219);
     font-weight: 300;
+    color: #fff;
 }
 main{
     display: grid;
