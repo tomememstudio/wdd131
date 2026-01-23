@@ -28,30 +28,41 @@ header {
     position: relative;
 }
 
-/* HERO IMAGE */
 .hero img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-/* MOBILE layout (stacked) */
 .content {
     padding: 1rem;
     display: grid;
     gap: 1rem;
 }
 
-/* Card style */
 .card {
     background-color: var(--card-bg);
     padding: 1rem;
     border-radius: 8px;
 }
 
+.weather {
+    max-width: 100%;
+}
+
+.weather h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
 .weather-icon {
-    width: 60px;
-    margin: 0.5rem 0;
+    width: 30px;
+    height: 30px;
+    max-width: 30px;
+    max-height: 30px;
+    display: block;
+    margin-top: 0.4rem;
 }
 
 footer {
@@ -61,8 +72,9 @@ footer {
     padding: 1rem;
 }
 
-/* DESKTOP layout: overlay cards on hero image */
+
 @media (min-width: 768px) {
+
     .content {
         position: absolute;
         top: 0;
@@ -70,7 +82,7 @@ footer {
         width: 100%;
         height: 100%;
         padding: 0;
-        display: block;
+        gap: 0;
     }
 
     .card {
@@ -78,25 +90,29 @@ footer {
         margin: 0;
     }
 
-    /* About Nigeria top-left */
     .content .card:first-child {
         position: absolute;
         top: 20px;
         left: 20px;
     }
 
-    /* Weather bottom-right */
     .weather {
         position: absolute;
         bottom: 20px;
         right: 20px;
     }
+    .weather h2 {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+    }
+
+    .weather-icon{
+        margin-top: 0;
+    }
 
     .weather h2::after {
-        content: " ⛅";
+        content: "";
     }
 
-    .weather-icon {
-        display: none;
-    }
 }
