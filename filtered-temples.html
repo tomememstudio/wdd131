@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <meta name="description"
+        content="Temple Album that shoows responsive behavior and showcases the picture of different temples.">
+    <meta name="author" content="Tom Emem">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h2 id="page-title">Temple Album</h2>
+        <button id="menu" aria-label="Menu"></button>
+        <nav>
+            <button id="home">Home</button>
+            <button id="old">Old</button>
+            <button id="new">New</button>
+            <button id="large">Large</button>
+            <button id="small">Small</button>
+        </nav>
+    </header>
+    <main>
+        <section id="temples"></section>
+    </main>
+    <footer>
+        <p>
+            © <span id="currentyear"></span> Tom Emem | Nigeria
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
