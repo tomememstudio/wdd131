@@ -1,25 +1,39 @@
 @media (min-width: 768px) {
 
-    /* Hide hamburger */
+    /* Hide the hamburger menu */
     #menu {
         display: none;
     }
 
-    /* Show nav normally */
+    /* Show nav links horizontally */
     nav {
         display: flex;
-        position: static;
         flex-direction: row;
+        position: static;
         width: auto;
         background-color: transparent;
+        justify-content: flex-end;
+        /* aligns links to the right */
+        gap: 1rem;
+        /* spacing between links */
     }
 
     nav a {
         padding: 0.5rem 1rem;
+        text-align: center;
+        font-weight: 500;
+        transition: background-color 0.3s;
     }
 
-    /* Grid expands */
+    nav a:hover {
+        background-color: #7b2cbf;
+        /* keeps hover effect */
+    }
+
+    /* Album grid: 3 columns on larger screens */
     .album {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
     }
 }

@@ -107,20 +107,28 @@ function displayTemples(array) {
 displayTemples(temples);
 
 
-document.getElementById('home').addEventListener('click', () => displayTemples(temples));
-document.getElementById('old').addEventListener('click', () => {
-    const filtered = temples.filter(t => parseInt(t.dedicated.split(",")[0]) < 1900);
-    displayTemples(filtered);
+document.getElementById('home').addEventListener('click', (event) => {
+    event.preventDefault();
+    displayTemples(temples);
 });
-document.getElementById('new').addEventListener('click', () => {
-    const filtered = temples.filter(t => parseInt(t.dedicated.split(",")[0]) > 2000);
-    displayTemples(filtered);
+
+document.getElementById('old').addEventListener('click', (event) => {
+    event.preventDefault();
+    displayTemples(temples);
 });
-document.getElementById('large').addEventListener('click', () => {
-    const filtered = temples.filter(t => t.area > 90000);
-    displayTemples(filtered);
+
+document.getElementById('new').addEventListener('click', (event) => {
+    event.preventDefault();
+    displayTemples(temples);
 });
-document.getElementById('small').addEventListener('click', () => {
-    const filtered = temples.filter(t => t.area < 10000);
-    displayTemples(filtered);
+
+document.getElementById('large').addEventListener('click', (event) => {
+    event.preventDefault();
+    displayTemples(temples);
 });
+
+document.getElementById('small').addEventListener('click', (event) => {
+    event.preventDefault();
+    displayTemples(temples);
+});
+
