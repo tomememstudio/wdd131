@@ -106,29 +106,40 @@ function displayTemples(array) {
 
 displayTemples(temples);
 
+function getYear(temple) {
+    return parseInt(temple.dedicated.split(",")[0]);
+}
 
-document.getElementById('home').addEventListener('click', (event) => {
-    event.preventDefault();
+// Home → show all
+document.getElementById('home').addEventListener('click', (e) => {
+    e.preventDefault();
     displayTemples(temples);
 });
 
-document.getElementById('old').addEventListener('click', (event) => {
-    event.preventDefault();
-    displayTemples(temples);
+// Old → before 1900
+document.getElementById('old').addEventListener('click', (e) => {
+    e.preventDefault();
+    const oldTemples = temples.filter(t => getYear(t) < 1900);
+    displayTemples(oldTemples);
 });
 
-document.getElementById('new').addEventListener('click', (event) => {
-    event.preventDefault();
-    displayTemples(temples);
+// New → after 2000
+document.getElementById('new').addEventListener('click', (e) => {
+    e.preventDefault();
+    const newTemples = temples.filter(t => getYear(t) > 2000);
+    displayTemples(newTemples);
 });
 
-document.getElementById('large').addEventListener('click', (event) => {
-    event.preventDefault();
-    displayTemples(temples);
+// Large → greater than 90,000 sq ft
+document.getElementById('large').addEventListener('click', (e) => {
+    e.preventDefault();
+    const largeTemples = temples.filter(t => t.area > 90000);
+    displayTemples(largeTemples);
 });
 
-document.getElementById('small').addEventListener('click', (event) => {
-    event.preventDefault();
-    displayTemples(temples);
+// Small → less than 10,000 sq ft
+document.getElementById('small').addEventListener('click', (e) => {
+    e.preventDefault();
+    const smallTemples = temples.filter(t => t.area < 10000);
+    displayTemples(smallTemples);
 });
-
