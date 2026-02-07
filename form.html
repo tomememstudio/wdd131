@@ -17,7 +17,7 @@
         <form method="get" action="review.html">
             <label for="product">Product Name *</label>
             <select name="product" id="product" required autocomplete="off">
-                <option disabled selected>Select a Product ...</option>
+                <option value="" disabled selected hidden>Select a Product ...</option>
             </select>
             
         <fieldset class="rating">
@@ -48,10 +48,18 @@
                     <em>(Check all that apply)</em>
                 </legend>
             
-                <label><input type="checkbox" id="durability" name="features" value="Durability">Durability</label>
-                <label><input type="checkbox" id="ease" name="features" value="Ease of Use">Ease of Use</label>
-                <label><input type="checkbox" id="performance" name="features" value="Performance">Performance</label>
-                <label><input type="checkbox" id="design" name="features" value="Design">Design</label>
+                <input type="checkbox" id="durability" name="features" value="Durability">
+                <label for="durability">Durability</label>
+                
+                <input type="checkbox" id="ease" name="features" value="Ease of Use">
+                <label for="ease">Ease of Use</label>
+                
+                <input type="checkbox" id="performance" name="features" value="Performance">
+                <label for="performance">Performance</label>
+                
+                <input type="checkbox" id="design" name="features" value="Design">
+                <label for="design">Design</label>
+
             </fieldset>
             
             <label for="review">Written Review <span class="optional">(Optional)</span></label>
