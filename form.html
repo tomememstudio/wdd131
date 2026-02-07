@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Tom Emem">
+    <title>Product Review</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form method="get" action="review.html">
+            <label for="product">Product Name *</label>
+            <select name="product" id="product" required>
+                <option disabled selected>Select a Product ...</option>
+            </select>
+            
+            <fieldset class="rating">
+                <legend>Overall Rating *</legend>
+                <label>
+                    <input type="radio" name="rating" value="1" required>
+                    <span>★</span>
+                </label>
+            
+                <label>
+                    <input type="radio" name="rating" value="2" required>
+                    <span>★★</span>
+                </label>
+            
+                <label>
+                    <input type="radio" name="rating" value="3" required>
+                    <span>★★★</span>
+                </label>
+            
+                <label>
+                    <input type="radio" name="rating" value="4" required>
+                    <span>★★★★</span>
+                </label>
+            
+                <label>
+                    <input type="radio" name="rating" value="5" required>
+                    <span>★★★★★</span>
+                </label>
+            </fieldset>
+            <label for="install">Date of installation *</label>
+            <input type="date" id="install" name="install" required>
+            
+            <fieldset>
+                <legend>
+                    Which features did you find useful in the product?
+                    <em>(Check all that apply)</em>
+                </legend>
+            
+                <label><input type="checkbox" name="features" value="Durability">Durability</label>
+                <label><input type="checkbox" name="features" value="Ease of Use">Ease of Use</label>
+                <label><input type="checkbox" name="features" value="Performance">Performance</label>
+                <label><input type="checkbox" name="features" value="Design">Design</label>
+            </fieldset>
+            
+            <label for="review">Written Review <span class="optional">(Optional)</span></label>
+            <input type="text" id="username" name="username">
+            
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+    <footer>
+        <p>
+            © <span id="currentyear"></span> Tom Emem | Nigeria
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
