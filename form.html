@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="Submit a product review including rating, installation date, useful features, and optional written feedback.">
     <meta name="author" content="Tom Emem">
     <title>Product Review</title>
     <link rel="stylesheet" href="styles/form.css">
@@ -16,7 +16,7 @@
     <main>
         <form method="get" action="review.html">
             <label for="product">Product Name *</label>
-            <select name="product" id="product" required>
+            <select name="product" id="product" required autocomplete="off">
                 <option disabled selected>Select a Product ...</option>
             </select>
             
@@ -28,27 +28,27 @@
                 </label>
             
                 <label>
-                    <input type="radio" name="rating" value="2" required>
+                    <input type="radio" name="rating" value="2">
                     <span>★★</span>
                 </label>
             
                 <label>
-                    <input type="radio" name="rating" value="3" required>
+                    <input type="radio" name="rating" value="3">
                     <span>★★★</span>
                 </label>
             
                 <label>
-                    <input type="radio" name="rating" value="4" required>
+                    <input type="radio" name="rating" value="4">
                     <span>★★★★</span>
                 </label>
             
                 <label>
-                    <input type="radio" name="rating" value="5" required>
+                    <input type="radio" name="rating" value="5">
                     <span>★★★★★</span>
                 </label>
             </fieldset>
             <label for="install">Date of installation *</label>
-            <input type="date" id="install" name="install" required>
+            <input type="date" id="install" name="install" required autocomplete="off">
             
             <fieldset>
                 <legend>
@@ -63,8 +63,9 @@
             </fieldset>
             
             <label for="review">Written Review <span class="optional">(Optional)</span></label>
-            <input type="text" id="username" name="username">
-            
+            <textarea name="review" id="review" rows="4" autocomplete="off"></textarea>
+            <label for="username">Your Name <span class="optional">(Optional)</span></label>
+            <input type="text" id="username" name="username" autocomplete="name">            
             <input type="submit" value="Post Review">
         </form>
     </main>

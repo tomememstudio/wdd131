@@ -1,8 +1,13 @@
 const yearSpan = document.getElementById("currentyear");
-const currentYear = new Date().getFullYear();
-yearSpan.textContent = currentYear;
+if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+}
 
-document.getElementById("lastModified").textContent = document.lastModified;
+const lastMod = document.getElementById("lastModified");
+if (lastMod) {
+    lastMod.textContent = document.lastModified;
+}
+
 const products = [
     { id: "p1", name: "Smart Speaker" },
     { id: "p2", name: "Wireless Headphones" },
@@ -11,7 +16,6 @@ const products = [
 ];
 
 const select = document.getElementById("product");
-
 if (select) {
     products.forEach(p => {
         const option = document.createElement("option");
@@ -21,12 +25,14 @@ if (select) {
     });
 }
 
-if (window.location.pathname.includes("review.html")) {
+const message = document.getElementById("message");
+if (message) {
     let count = localStorage.getItem("reviewCount") || 0;
     count++;
     localStorage.setItem("reviewCount", count);
 
-    document.getElementById("message").innerHTML =
-        `<h2>Thank you for your review!</h2>
-     <p>Total reviews submitted: <strong>${count}</strong></p>`;
+    message.innerHTML = `
+        <h2>Thank you for your review!</h2>
+        <p>Total reviews submitted: <strong>${count}</strong></p>
+    `;
 }
